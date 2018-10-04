@@ -1,8 +1,7 @@
 ## Commands
 
 ```bash
-dotnet build src/MyApi/MyApi.csproj
-
 dotnet new webapi --output src/MyApi
-dotnet add src/MyApi/MyApi.csproj package NSwag
+dotnet add src/MyApi/MyApi.csproj package NSwag.MSBuild
+dotnet build src/MyApi/MyApi.csproj
 ```
