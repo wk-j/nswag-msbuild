@@ -9,25 +9,20 @@ namespace MyApi.Controllers {
     [ApiController]
     public class ValuesController : ControllerBase {
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get() {
-            return new string[] { "value1", "value2" };
-        }
+        public ActionResult<IEnumerable<string>> Get() =>
+            new string[] { "value1", "value2" };
 
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id) {
-            return "value";
-        }
+        public ActionResult<string> Get(int id) => "value";
 
         [HttpPost]
-        public void Post([FromBody] string value) {
-        }
+        public ActionResult<string> Post([FromBody] string value) =>
+            value + value;
 
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value) {
-        }
+        public void Put(int id, [FromBody] string value) { }
 
         [HttpDelete("{id}")]
-        public void Delete(int id) {
-        }
+        public void Delete(int id) { }
     }
 }

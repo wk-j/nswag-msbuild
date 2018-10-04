@@ -1,9 +1,7 @@
-import { ValuesClient } from "./generated/MyApi"
+import { ValuesClient } from "./generated/TypeScript/MyApiClient"
 
-var api = new ValuesClient("")
+let api = new ValuesClient("")
 
-api.getAll().then(data => {
-    console.log(data);
-}, err => {
-    console.error(err);
+api.post("New values").then(rs => {
+    console.log(rs);
 })

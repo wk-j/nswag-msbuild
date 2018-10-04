@@ -1,6 +1,6 @@
 {
     "swaggerGenerator": {
-        "webApiToSwagger": {
+        "aspNetCoreToSwagger": {
             "assemblyPaths": [
                 "$(OutputPath)/MyApi.dll"
             ]
@@ -10,7 +10,13 @@
         "swaggerToTypeScriptClient": {
             "className": "{controller}Client",
             "typeScriptVersion": 1.8,
-            "output": "../../client/generated/MyApi.ts"
+            "template": "Fetch",
+            "output": "../../client/generated/TypeScript/MyApiClient.ts"
+        },
+        "swaggerToCSharpClient": {
+            "namespace": "MyClient",
+            "className": "{controller}Client",
+            "output": "../../tests/MyClient/MyApiClient.cs"
         }
     }
 }

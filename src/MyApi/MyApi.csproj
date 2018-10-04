@@ -7,7 +7,7 @@
     </ItemGroup>
 
     <Target Name="Echo">
-        <Exec Command="echo OutputPath = $(OutputPath)"/>
+        <Exec Command="echo OutputPath = $(OutputPath)" />
     </Target>
 
     <Target Name="NSwag" AfterTargets="Build">
@@ -17,6 +17,7 @@
     </Target>
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.App" />
+        <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
         <PackageReference Include="NSwag.MSBuild" Version="11.20.1">
             <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
