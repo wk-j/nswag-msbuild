@@ -2,7 +2,6 @@ using System;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MyApi {
-
     public class Student {
         public string Id { set; get; }
         public string Name { set; get; }
