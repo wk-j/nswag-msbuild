@@ -2,7 +2,7 @@
 
 1. Edit `src/NSwagMSBuild/nswag.json`
 
-2. Put this tag in `NSwagMSBuild.csproj`
+2. Put this tag inside `NSwagMSBuild.csproj`
 
 ```xml
   <Target Name="NSwag" AfterTargets="Build">
