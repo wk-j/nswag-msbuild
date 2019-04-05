@@ -1,4 +1,5 @@
 {
+    "runtime": "NetCore22",
     "swaggerGenerator": {
         "aspNetCoreToSwagger": {
             "assemblyPaths": [
@@ -11,12 +12,12 @@
             "className": "{controller}Client",
             "typeScriptVersion": 1.8,
             "template": "Fetch",
-            "output": "../../client/generated/MyApiClient.ts"
+            "output": "../../.client/generated/MyApiClient.ts"
         },
         "swaggerToCSharpClient": {
             "namespace": "MyClient",
             "className": "{controller}Client",
-            "output": "../../client/generated/MyApiClient.cs"
+            "output": "../../.client/generated/MyApiClient.cs"
         }
     }
 }

@@ -1,0 +1,7 @@
+<Project>
+    <Target Name="NSwag" AfterTargets="Build">
+        <Copy SourceFiles="@(ReferencePath)" DestinationFolder="$(OutDir)References" />
+        <Exec Command="$(NSwagExe_Core22) run nswag.json /variables:Configuration=$(Configuration),OutDir=$(OutDir),OutputPath=$(OutputPath)" />
+        <RemoveDir Directories="$(OutDir)References" />
+    </Target>
+</Project>

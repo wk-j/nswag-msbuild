@@ -1,20 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.1</TargetFramework>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
         <Folder Include="wwwroot\" />
     </ItemGroup>
-    <Target Name="NSwag" AfterTargets="Build">
-        <Copy SourceFiles="@(Reference)" DestinationFolder="$(OutDir)References" />
-        <Exec Command="$(NSwagExe_Core21) run /variables:OutputPath=$(OutputPath)" />
-        <RemoveDir Directories="$(OutDir)References" />
-    </Target>
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.App" />
-        <PackageReference Include="NSwag.MSBuild" Version="11.20.1">
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-            <PrivateAssets>all</PrivateAssets>
-        </PackageReference>
+        <PackageReference Include="NSwag.AspNetCore" Version="12.1.0" />
     </ItemGroup>
 </Project>
