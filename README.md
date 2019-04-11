@@ -61,6 +61,12 @@ dotnet add src/MyApi.Generate/MyApi.Generate.csproj package NSwag.MSBuild
 </Project>
 ```
 
+- Add
+
+```bash
+services.AddSwaggerDocument();
+```
+
 - Generate client API
 
 ```bash
